@@ -1,0 +1,41 @@
+apply from: "../component_build.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+//    signingConfigs {
+//        cy {
+//            storeFile file(CY_KEY_PATH)
+//            storePassword CY_KEY_PASS
+//            keyAlias CY_ALIAS_NAME
+//            keyPassword CY_ALIAS_PASS
+//        }
+//    }
+
+    buildTypes {
+        release {
+//            signingConfig signingConfigs.cy
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+//        debug {
+//            signingConfig signingConfigs.cy
+//        }
+    }
+//    compileOptions {
+//        sourceCompatibility = 1.8
+//        targetCompatibility = 1.8
+//    }
+//
+//    kotlinOptions {
+//        jvmTarget = "1.8"
+//    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

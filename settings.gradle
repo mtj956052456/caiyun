@@ -1,2 +1,5 @@
-rootProject.name='CaiYun'
+rootProject.name='BaseProject'
 include ':app'
+include ':library_common'
+include ':model_login'
+include ':model_caiyun'

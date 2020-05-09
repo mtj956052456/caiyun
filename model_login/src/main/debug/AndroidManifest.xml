@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mtj.login">
+    <!-- 单独调试 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:name=".app.LoginApp"
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        android:networkSecurityConfig="@xml/network_config"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
