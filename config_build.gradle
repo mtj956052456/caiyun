@@ -84,6 +84,19 @@ android {
         experimental = true
     }
 
+    // 优化`transformClassDexBuilderForDebug`的编译速度
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+    }
+
+    kapt {
+        useBuildCache = true
+        javacOptions {
+            option("-Xmaxerrs", 500)
+        }
+    }
+
 }
 
 dependencies {
