@@ -18,7 +18,6 @@ android {
 }
 
 dependencies {
-    kapt rootProject.ext.dependencies["arouter-compiler"]
     if (!isBuildModule.toBoolean()) {
         implementation project(':model_caiyun')
         implementation project(':model_login')

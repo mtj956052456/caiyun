@@ -4,6 +4,7 @@ import androidx.lifecycle.liveData
 import com.mtj.wanandroid.logic.model.OfficialAccountBean
 import com.mtj.wanandroid.logic.network.OfficialAccountNetwork
 import kotlinx.coroutines.Dispatchers
+import kotlin.coroutines.CoroutineContext
 
 /**
  * @author  孟腾蛟
@@ -12,28 +13,26 @@ import kotlinx.coroutines.Dispatchers
  */
 object Repository {
 
-    fun getOfficialAccount() = liveData(Dispatchers.IO) {
-        val result = try {
-            val response = OfficialAccountNetwork.getOfficialAccount()
-            if (response.errorCode == 0) {
-                val officialAccount = response.data
-                Result.success(officialAccount)
-            } else {
-                Result.failure(RuntimeException("response status is ${response.errorCode}"))
-            }
-        } catch (e: Exception) {
-            Result.failure<List<OfficialAccountBean>>(e)
+    /**
+     * 获取公众号信息
+     */
+    fun getOfficialAccount() = fire(Dispatchers.IO) {
+        val response = OfficialAccountNetwork.getOfficialAccount()
+        if (response.errorCode == 0) {
+            val officialAccount = response.data
+            Result.success(officialAccount)
+        } else {
+            Result.failure(RuntimeException("response status is ${response.errorCode}"))
         }
-        emit(result)
     }
 
 
-//    private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) = liveData<Result<T>>(context) {
-//        val result = try {
-//            block()
-//        } catch (e: Exception) {
-//            Result.failure<T>(e)
-//        }
-//        emit(result)
-//    }
+    private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) = liveData<Result<T>>(context) {
+        val result = try {
+            block()
+        } catch (e: Exception) {
+            Result.failure<T>(e)
+        }
+        emit(result)
+    }
 }
