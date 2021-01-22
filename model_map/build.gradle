@@ -1,0 +1,45 @@
+apply from: "../component_build.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    defaultConfig {
+        applicationId "com.mtj.map"
+    }
+
+    signingConfigs {
+        map {
+            storeFile file(MAP_KEY_PATH)
+            storePassword MAP_KEY_PASS
+            keyAlias MAP_ALIAS_NAME
+            keyPassword MAP_ALIAS_PASS
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.map
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.map
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.amap.api:3dmap:5.0.0'
+    implementation 'com.amap.api:location:3.3.0'
+    implementation 'com.amap.api:search:5.0.0'
+}
+
+repositories {
+    mavenCentral()
+}

@@ -1,1 +1,0 @@
-model_shell是一个壳,在添加业务Model的时候,可以复制粘贴后设置包名后再根目录setting.gradle文件中配置gradle名称

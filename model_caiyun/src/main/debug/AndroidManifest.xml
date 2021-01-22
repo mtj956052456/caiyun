@@ -13,7 +13,7 @@
         android:networkSecurityConfig="@xml/network_config"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="com.mtj.cy.ui.weather.WeatherActivity"/>
+        <activity android:name=".ui.weather.WeatherActivity"/>
 
         <activity android:name=".CaiYunActivity">
             <intent-filter>

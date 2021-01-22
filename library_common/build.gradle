@@ -72,11 +72,11 @@ dependencies {
 
     //basepopupwindow
     api rootProject.ext.dependencies["BasePopup"]
-    api rootProject.ext.dependencies["bga-refreshlayout"]
-    api rootProject.ext.dependencies["MPAndroidChart"]
+//    api rootProject.ext.dependencies["bga-refreshlayout"]
+//    api rootProject.ext.dependencies["MPAndroidChart"]
     api rootProject.ext.dependencies["circleimageview"]
     api rootProject.ext.dependencies["multidex"]
-    api rootProject.ext.dependencies["cardview"]
+//    api rootProject.ext.dependencies["cardview"]
     api rootProject.ext.dependencies["eventbus"]
     api rootProject.ext.dependencies["album"]
     api rootProject.ext.dependencies["loopView"]
@@ -86,7 +86,7 @@ dependencies {
     api rootProject.ext.dependencies["zxing"]
     api rootProject.ext.dependencies["album"]
     api rootProject.ext.dependencies["permission"]
-    api rootProject.ext.dependencies["lottie"]
+//    api rootProject.ext.dependencies["lottie"]
     api rootProject.ext.dependencies["aspectjrt"]
 
 }

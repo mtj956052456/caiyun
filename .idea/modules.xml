@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BaseProject.iml" filepath="$PROJECT_DIR$/.idea/modules/BaseProject.iml" group="BaseProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="BaseProject/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library_common/library_common.iml" filepath="$PROJECT_DIR$/.idea/modules/library_common/library_common.iml" group="BaseProject/library_common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_caiyun/model_caiyun.iml" filepath="$PROJECT_DIR$/.idea/modules/model_caiyun/model_caiyun.iml" group="BaseProject/model_caiyun" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_login/model_login.iml" filepath="$PROJECT_DIR$/.idea/modules/model_login/model_login.iml" group="BaseProject/model_login" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_map/model_map.iml" filepath="$PROJECT_DIR$/.idea/modules/model_map/model_map.iml" group="BaseProject/model_map" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model_wanandroid/model_wanandroid.iml" filepath="$PROJECT_DIR$/.idea/modules/model_wanandroid/model_wanandroid.iml" group="BaseProject/model_wanandroid" />
+    </modules>
+  </component>
+</project>
