@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mtj.common.weight.CustomToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customtoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:background="@color/colorPrimary"
+    app:contentInsetStart="0dp"
+    app:elevation="0pt"
+    app:contentInsetStartWithNavigation="0dp">
+
+    <TextView
+        android:id="@+id/lt_main_title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/toolbar_height"
+        android:gravity="center"
+        android:minWidth="@dimen/toolbar_height"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/lt_main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="#40B597"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/lt_main_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:minWidth="@dimen/toolbar_height"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+</com.mtj.common.weight.CustomToolbar>
+
+

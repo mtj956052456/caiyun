@@ -13,7 +13,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         ndk { //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
-            abiFilters "armeabi"/*, "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64"*/
+            abiFilters "armeabi", "armeabi-v7a" /*"arm64-v8a", "x86", "arm64-v8a", "x86_64"*/
         }
     }
 
@@ -64,8 +64,8 @@ dependencies {
     api rootProject.ext.dependencies["converter-gson"]
 
     //数据加载控件
-    api rootProject.ext.dependencies["SmartRefreshLayout"]
-    //api rootProject.ext.dependencies["SmartRefreshHeader"]
+    api rootProject.ext.dependencies["smart_layout"]
+    api rootProject.ext.dependencies["smart_classics"]
 
     //glide图片加载
     api rootProject.ext.dependencies["glide"]
@@ -88,5 +88,6 @@ dependencies {
     api rootProject.ext.dependencies["permission"]
 //    api rootProject.ext.dependencies["lottie"]
     api rootProject.ext.dependencies["aspectjrt"]
+    api rootProject.ext.dependencies["immersionbar"]
 
 }

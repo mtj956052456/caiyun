@@ -4,10 +4,6 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
 
-    defaultConfig {
-        applicationId "com.mtj.map"
-    }
-
     signingConfigs {
         map {
             storeFile file(MAP_KEY_PATH)
@@ -35,9 +31,10 @@ android {
 }
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.amap.api:3dmap:5.0.0'
-    implementation 'com.amap.api:location:3.3.0'
-    implementation 'com.amap.api:search:5.0.0'
+    implementation files('libs/AMap3DMap_7.8.0_AMapSearch_7.7.0_AMapLocation_5.2.0_20201231.jar')
+//    implementation 'com.amap.api:3dmap:7.7.0'
+//    implementation 'com.amap.api:location:5.2.0'
+//    implementation 'com.amap.api:search:7.7.0'
 }
 
 repositories {

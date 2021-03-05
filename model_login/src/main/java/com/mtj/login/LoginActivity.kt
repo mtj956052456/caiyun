@@ -16,8 +16,8 @@ class LoginActivity : BaseActivity() {
         return R.layout.activity_login
     }
 
-    override fun afterBinder() {
-        super.afterBinder()
+    override fun afterCreation() {
+        super.afterCreation()
         setSwipeBackEnable(false)
     }
 }

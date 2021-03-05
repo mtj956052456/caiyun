@@ -12,8 +12,8 @@ class CaiYunActivity : BaseActivity() {
         return R.layout.activity_caiyun
     }
 
-    override fun afterBinder() {
-        super.afterBinder()
+    override fun afterCreation() {
+        super.afterCreation()
         val beginTransaction = supportFragmentManager.beginTransaction()
         beginTransaction.add(R.id.placeFragment,PlaceFragment())
         beginTransaction.commit()

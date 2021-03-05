@@ -11,6 +11,7 @@ public class ActivityHolder {
     public final static String LOGIN = "/login/LoginActivity";
     public final static String WELCOME = "/welcome/WelcomeActivity";
     public final static String MAP = "/map/MapActivity";
+    public final static String WAN_ANDROID = "/wan_android/WAN_ANDROID";
 
     public final static String CAIYUN = "/cy/CaiYunActivity";
 

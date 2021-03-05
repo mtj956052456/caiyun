@@ -48,15 +48,15 @@ class Test {
 //        }
 //    }
 
-    /**
-     * 初始化加载更多
-     */
-    private fun initLoadMore() {
-        mAdapter.loadMoreModule.setOnLoadMoreListener(OnLoadMoreListener { loadMore() })
-        mAdapter.loadMoreModule.isAutoLoadMore = true
-        //当自动加载开启，同时数据不满一屏时，是否继续执行自动加载更多(默认为true)
-        mAdapter.loadMoreModule.isEnableLoadMoreIfNotFullPage = false
-    }
+//    /**
+//     * 初始化加载更多
+//     */
+//    private fun initLoadMore() {
+//        mAdapter.loadMoreModule.setOnLoadMoreListener(OnLoadMoreListener { loadMore() })
+//        mAdapter.loadMoreModule.isAutoLoadMore = true
+//        //当自动加载开启，同时数据不满一屏时，是否继续执行自动加载更多(默认为true)
+//        mAdapter.loadMoreModule.isEnableLoadMoreIfNotFullPage = false
+//    }
 
     internal class PageInfo {
         var page = 0

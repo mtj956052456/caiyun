@@ -1,7 +1,6 @@
 package com.mtj.map
 
 import android.content.Intent
-import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.mtj.common.base.ActivityHolder
 import com.mtj.common.base.BaseActivity
@@ -20,8 +19,9 @@ class MapActivity : BaseActivity() {
         return R.layout.activity_map
     }
 
-    override fun afterBinder() {
-        super.afterBinder()
+    override fun afterCreation() {
+        super.afterCreation()
+        initCustomToolbar("地图")
         btnPoi.setOnClickListener {
             startActivity(Intent(this, MapPoiActivity::class.java))
         }
@@ -29,4 +29,5 @@ class MapActivity : BaseActivity() {
             startActivity(Intent(this, MapLocationActivity::class.java))
         }
     }
+
 }

@@ -11,16 +11,14 @@ class MainActivity : BaseActivity() {
         return R.layout.activity_main
     }
 
-    override fun afterBinder() {
-        super.afterBinder()
+    override fun afterCreation() {
+        super.afterCreation()
         btn_login.setOnClickListener {
             intoActivity(ActivityHolder.LOGIN)
         }
         btn_cy.setOnClickListener {
             intoActivity(ActivityHolder.CAIYUN)
         }
-
-
     }
 
     private inline fun getData() {
